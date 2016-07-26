@@ -2,13 +2,27 @@ const CompareNumber = require('../src/models/CompareNumber');
 
 describe('guess number', () => {
 
-    const systemNumber = '1234';
-    it('get 4A0B', () => {
-
-        const userNumber = '1234';
-        const compareNumber = new CompareNumber(systemNumber, userNumber);
-        const compareResult = compareNumber.getCompareResult();
-        const expectResult = '4A0B';
-        expect(compareResult).toEqual(expectResult);
+    it('get result', () => {
+        [
+            {
+                input: '1234',
+                answer: '1234',
+                result: '4A0B'
+            },
+            {
+                input: '4321',
+                answer: '1234',
+                result: '0A4B'
+            },
+            {
+                input: '1254',
+                answer: '1234',
+                result: '3A0B'
+            }
+        ].forEach((item) => {
+           const test = new CompareNumber(item.input, item.answer);
+            const result = test.getCompareResult();
+            expect(result).toEqual(item.result);
+        });
     });
 });
