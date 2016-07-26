@@ -1,8 +1,4 @@
 class CompareNumber{
-    constructor(input, answer){
-        this.input = input;
-        this.answer = answer;
-    }
 
     static getCompareResult(input, answer){
 
