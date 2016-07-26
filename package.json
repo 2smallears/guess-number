@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "jasmine": "^2.4.1",
     "scanf": "^0.7.2"
   }
 }
