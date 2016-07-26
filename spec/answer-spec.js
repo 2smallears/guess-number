@@ -11,4 +11,4 @@ describe('Answer Generator', () => {
         expect(answer.every(isUnique)).toBeTruthy();
         expect(AnswerGenerator.generator()).not.toEqual(AnswerGenerator.generator());
     });
-})
+});
