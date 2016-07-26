@@ -4,13 +4,13 @@ class CompareNumber{
         this.answer = answer;
     }
 
-    getCompareResult(){
+    static getCompareResult(input, answer){
 
-        if (this.input === this.answer){
+        if (input === answer){
             return '4A0B';
         } else {
-            const inputArr = this.input.split('');
-            const answerArr = this.answer.split('');
+            const inputArr = input.split('');
+            const answerArr = answer.split('');
 
             const sameNum = answerArr.filter(num => inputArr.find(input => input === num));
 

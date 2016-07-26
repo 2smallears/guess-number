@@ -20,8 +20,7 @@ describe('guess number', () => {
                 result: '3A0B'
             }
         ].forEach((item) => {
-           const test = new CompareNumber(item.input, item.answer);
-            const result = test.getCompareResult();
+            const result = CompareNumber.getCompareResult(item.input, item.answer);
             expect(result).toEqual(item.result);
         });
     });
