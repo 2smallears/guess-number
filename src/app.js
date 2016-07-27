@@ -8,7 +8,7 @@ class Game {
 
         process.stdin.setEncoding('utf8');
         process.stdin.on('data', (input) => {
-            if (input.length!== 5 || !(this.validate(input))){
+            if (!(this.validate(input))){
                 console.log('Cannot input duplicate numbers!');
                 this.ask();
             } else {
